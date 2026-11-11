@@ -32,12 +32,18 @@ Se impone en la base de datos, no en la interfaz: cada fila lleva `ambito_id` y 
 ```bash
 npm run dev        # desarrollo, http://localhost:8801
 npm test           # reparto + aislamiento
-npm run build      # genera dist/ para publicar
+npm run build      # genera dist/
+npm run publicar   # build + subida a la rama gh-pages (GitHub Pages)
 npm run verificar  # contra el Supabase real: sin sesión no se lee ni se escribe
 npm run copia      # copia de todos los datos a copias/ (necesita .env.copia)
 ```
 
+## Publicación
+
+- Enlace: https://acceler-mkt.github.io/finanzas/ (GitHub Pages, rama `gh-pages`; el código va en `main`).
+- Publicada el 11-11-2026 con datos de prueba. Con `.env.local` presente, `npm run publicar` la publica conectada a Supabase; la URL del proyecto y la clave pública quedan visibles en el bundle, que es lo previsto.
+
 ## Pendiente
 
-- Crear el proyecto de Supabase y publicarla (pasos en `GUIA.pdf`). La ruta de datos reales no se ha podido probar de extremo a extremo hasta que exista el proyecto.
+- Crear el proyecto de Supabase y volver a publicar (pasos en `GUIA.pdf`). La ruta de datos reales no se ha podido probar de extremo a extremo hasta que exista el proyecto.
 - Aparcado por decisión de Alfonso (10-11-2026): conexión bancaria, categorías, lectura de facturas, enlace con el ERP.
